@@ -104,17 +104,23 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="my-[10vh] flex flex-col h-[70vh] max-w-2xl mx-auto  shadow-lg shadow-black dark:shadow-white rounded-lg overflow-hidden font-sans shadow-l text-white">
+    <div className="my-[10vh] flex flex-col h-[70vh] max-w-2xl mx-auto shadow-lg shadow-black dark:shadow-white rounded-lg overflow-hidden font-sans shadow-l text-white">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center py-3   m-0 bg-gray-900 text-lg font-semibold text-purple-500"
+        className="text-center py-3 m-0 bg-gray-900 text-lg font-semibold text-purple-400"
       >
-        Clothing Brand Chatbot
+        Wolf Store Bot
       </motion.h1>
 
-      <div className="relative flex flex-col h-[70vh]  overflow-hidden font-sans shadow-2xl bg-black/20 backdrop-blur-2xl ">
+      <div 
+        ref={chatContainerRef}
+        className="relative flex flex-col h-[70vh] overflow-y-auto font-sans shadow-2xl bg-black/20 backdrop-blur-lg scrollbar-hide"
+        style={{
+          WebkitOverflowScrolling: 'touch',
+        }}
+      >
         <AnimatePresence>
           {chatHistory.map((chatItem, index) => (
             <motion.div
@@ -123,14 +129,26 @@ export default function ChatPage() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`max-w-[80%] p-2  text-white ${
-                chatItem.role === "user"
-                  ? "self-end bg-purple-600 rounded-br-none"
-                  : "self-start bg-gray-800 rounded-bl-none"
-              }`}
+              className={`
+                max-w-[80%] 
+                px-4 py-3 my-2 mx-2
+                text-white 
+                shadow-md 
+                backdrop-blur-md 
+                bg-purple-600 
+                ${
+                  chatItem.role === "user"
+                    ? "self-end rounded-2xl rounded-br-none"
+                    : "self-start rounded-2xl rounded-bl-none"
+                }
+              `}
             >
-              <strong>{chatItem.role === "user" ? "You:" : "Chatbot:"}</strong>
-              <ReactMarkdown>{chatItem.parts[0].text}</ReactMarkdown>
+              <strong className="block text-sm text-gray-300 mb-1">
+                {chatItem.role === "user" ? "You:" : "Wolfbot:"}
+              </strong>
+              <ReactMarkdown>
+                {chatItem.parts[0].text}
+              </ReactMarkdown>
             </motion.div>
           ))}
         </AnimatePresence>
@@ -141,7 +159,7 @@ export default function ChatPage() {
             animate="animate"
             className="text-center text-gray-400 py-2"
           >
-            Chatbot is thinking...
+            Wolfbot is thinking...
           </motion.div>
         )}
         <AnimatePresence>
@@ -164,7 +182,7 @@ export default function ChatPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex p-3   bg-gray-900"
+        className="flex p-3 bg-gray-900"
       >
         <input
           type="text"
