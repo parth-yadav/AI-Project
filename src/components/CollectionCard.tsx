@@ -26,7 +26,7 @@ const CollectionCard = ({
     <Link
       href={`/collections/${encodeURIComponent(title)}`}
       className={`relative ${cardClasses} group cursor-pointer ${
-        isHovered ? "border-2 border-orange-500" : ""
+        isHovered ? "border-2 border-purple-500" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -39,7 +39,6 @@ const CollectionCard = ({
           src={image}
           alt={title}
           fill // Automatically sizes the image to fit the container
-          
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
         {/* Gradient Overlay */}

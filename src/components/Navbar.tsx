@@ -7,7 +7,7 @@ import { useAuth } from "../lib/useAuth";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
 import LogoutButton from "./Logout";
-import ThemeToggle from "./ThemeTogglee"
+import ThemeToggle from "./ThemeTogglee";
 
 // Define the shape of the collection data
 interface Collection {
@@ -49,14 +49,25 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-8">
           <Link href="/" className="hover:opacity-80 transition-opacity -my-2">
+            {/* Light mode logo */}
             <Image
-              src="https://therebel.org.in/assets/symbol-BaBtzzzl.svg"
+              src="/images/white.jpg"
               alt="The Rebel Logo"
-              width={56} // TailwindCSS w-14 = 56px
-              height={56} // TailwindCSS h-14 = 56px
-              className="object-cover"
+              width={56}
+              height={56}
+              className="object-cover block dark:hidden"
+            />
+
+            {/* Dark mode logo */}
+            <Image
+              src="/images/black.jpg"
+              alt="The Rebel Logo Dark"
+              width={56}
+              height={56}
+              className="object-cover hidden dark:block"
             />
           </Link>
+
           <ThemeToggle />
 
           {/* Desktop Links */}
@@ -65,7 +76,7 @@ const Navbar = () => {
               <Link
                 key={collection.id}
                 href={`/collections/${collection.name}`}
-                className="hover:text-orange-500 transition-colors"
+                className="hover:text-purple-500 transition-colors"
               >
                 {collection.name.toUpperCase()}
               </Link>
@@ -95,7 +106,7 @@ const Navbar = () => {
                   {/* Profile Button */}
                   <button
                     onClick={() => setIsProfileOpen(!isProfileOpen)}
-                    className="hover:text-orange-500 transition-colors"
+                    className="hover:text-purple-500 transition-colors"
                     aria-label="Profile"
                   >
                     <FiUser className="w-6 h-6" />
@@ -103,7 +114,7 @@ const Navbar = () => {
 
                   {/* Shopping Cart Icon */}
                   <Link href="/shoppingcart" aria-label="Shopping Cart">
-                    <FiShoppingCart className="w-6 h-6 cursor-pointer hover:text-orange-500 transition-colors" />
+                    <FiShoppingCart className="w-6 h-6 cursor-pointer hover:text-purple-500 transition-colors" />
                   </Link>
                 </div>
 
@@ -131,7 +142,7 @@ const Navbar = () => {
               /* Login Button */
               <Link
                 href="/login"
-                className="bg-orange-500 text-rebel-light px-6 py-2 rounded-full hover:bg-orange-600 transition-colors font-nofex"
+                className="bg-purple-500 text-rebel-light px-6 py-2 rounded-full hover:bg-purple-600 transition-colors font-nofex"
               >
                 Login
               </Link>
@@ -157,7 +168,7 @@ const Navbar = () => {
               <Link
                 key={collection.id}
                 href={`/collections/${collection.name}`}
-                className="hover:text-orange-500 transition-colors"
+                className="hover:text-purple-500 transition-colors"
               >
                 {collection.name.toUpperCase()}
               </Link>

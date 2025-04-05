@@ -63,7 +63,7 @@ const Hero = ({ data }: HeroProps) => {
               </h1>
               <a
                 href={slide.link}
-                className="text-rebel-light text-lg font-nofex hover:text-orange-500 transition-colors border-b border-transparent hover:border-orange-500"
+                className="text-rebel-light text-lg font-nofex hover:text-purple-500 transition-colors border-b border-transparent hover:border-purple-500"
               >
                 Shop Now
               </a>

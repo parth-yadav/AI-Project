@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,7 +27,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-rebel-dark dark:text-rebel-light hover:text-orange-500 transition-colors font-impact"
+                  className="text-rebel-dark dark:text-rebel-light hover:text-purple-500 transition-colors font-impact"
                 >
                   About Us
                 </a>
@@ -35,7 +35,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-rebel-dark dark:text-rebel-light hover:text-orange-500 transition-colors font-impact"
+                  className="text-rebel-dark dark:text-rebel-light hover:text-purple-500 transition-colors font-impact"
                 >
                   Contact
                 </a>
@@ -43,7 +43,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-rebel-dark dark:text-rebel-light hover:text-orange-500 transition-colors font-impact"
+                  className="text-rebel-dark dark:text-rebel-light hover:text-purple-500 transition-colors font-impact"
                 >
                   FAQs
                 </a>
@@ -51,7 +51,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-rebel-dark dark:text-rebel-light hover:text-orange-500 transition-colors font-impact"
+                  className="text-rebel-dark dark:text-rebel-light hover:text-purple-500 transition-colors font-impact"
                 >
                   Shipping
                 </a>
@@ -65,19 +65,19 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-rebel-dark dark:text-rebel-light text-lg  hover:text-orange-500 transition-colors"
+                className="text-rebel-dark dark:text-rebel-light text-lg  hover:text-purple-500 transition-colors"
               >
                 <FaFacebookF className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="text-rebel-dark dark:text-rebel-light text-lg  hover:text-orange-500 transition-colors"
+                className="text-rebel-dark dark:text-rebel-light text-lg  hover:text-purple-500 transition-colors"
               >
                 <FaInstagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="text-rebel-dark dark:text-rebel-light text-lg  hover:text-orange-500 transition-colors"
+                className="text-rebel-dark dark:text-rebel-light text-lg  hover:text-purple-500 transition-colors"
               >
                 <FaTwitter className="w-5 h-5" />
               </a>

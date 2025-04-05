@@ -33,8 +33,8 @@ export default function ImageCarousel({ images, name }: ImageCarouselProps) {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="bg-black text-orange-600 left-2" />
-            <CarouselNext className="right-2 bg-black text-orange-600" />
+            <CarouselPrevious className="bg-black text-purple-600 left-2" />
+            <CarouselNext className="right-2 bg-black text-purple-600" />
           </Carousel>
         ) : (
           <div className="w-full h-full flex items-center justify-center">

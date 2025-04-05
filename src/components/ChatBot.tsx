@@ -109,12 +109,12 @@ export default function ChatPage() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center py-3 border-b  m-0 bg-gray-900 text-lg font-semibold text-orange-500"
+        className="text-center py-3   m-0 bg-gray-900 text-lg font-semibold text-purple-500"
       >
         Clothing Brand Chatbot
       </motion.h1>
 
-      <div className="relative flex flex-col h-[70vh] rounded-lg overflow-hidden font-sans shadow-2xl bg-black/20 backdrop-blur-2xl border border-white/10">
+      <div className="relative flex flex-col h-[70vh]  overflow-hidden font-sans shadow-2xl bg-black/20 backdrop-blur-2xl ">
         <AnimatePresence>
           {chatHistory.map((chatItem, index) => (
             <motion.div
@@ -123,9 +123,9 @@ export default function ChatPage() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`max-w-[80%] p-2 rounded-lg text-white ${
+              className={`max-w-[80%] p-2  text-white ${
                 chatItem.role === "user"
-                  ? "self-end bg-orange-600 rounded-br-none"
+                  ? "self-end bg-purple-600 rounded-br-none"
                   : "self-start bg-gray-800 rounded-bl-none"
               }`}
             >
@@ -151,7 +151,7 @@ export default function ChatPage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="text-center text-orange-500 bg-gray-900 border border-orange-700 rounded px-3 py-2 my-2"
+              className="text-center text-purple-500 bg-gray-900 border border-purple-700 rounded px-3 py-2 my-2"
             >
               {error}
             </motion.div>
@@ -171,14 +171,14 @@ export default function ChatPage() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Ask about our products..."
-          className="flex-1 px-3 py-2 border border-gray-600 rounded mr-2 text-base bg-black text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
+          className="flex-1 px-3 py-2 border border-gray-600 rounded mr-2 text-base bg-black text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
           disabled={isLoading}
         />
         <motion.button
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-4 py-2 bg-orange-600 text-white rounded text-base disabled:opacity-50 hover:bg-orange-700 transition-colors duration-200"
+          className="px-4 py-2 bg-purple-600 text-white rounded text-base disabled:opacity-50 hover:bg-purple-700 transition-colors duration-200"
           disabled={isLoading}
         >
           {isLoading ? "Sending..." : "Send"}

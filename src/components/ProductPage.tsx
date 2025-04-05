@@ -150,7 +150,7 @@ export default function ProductPage({ product }: ProductPageProps) {
               <FiHeart
                 className={`w-5 h-5 transition-colors ${
                   isWishlisted
-                    ? "text-orange-500 fill-orange-500"
+                    ? "text-purple-500 fill-purple-500"
                     : "text-rebel-light"
                 }`}
               />
@@ -177,7 +177,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           </div>
           <button
             onClick={addToCart}
-            className="w-full py-4 bg-orange-600 text-rebel-dark hover:text-white font-semibold rounded-md hover:opacity-90 transition-opacity"
+            className="w-full py-4 bg-purple-600 text-rebel-dark hover:text-white font-semibold rounded-md hover:opacity-90 transition-opacity"
           >
             Add to Cart
           </button>

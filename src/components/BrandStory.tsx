@@ -16,11 +16,18 @@ const BrandStory = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src="https://therebel.org.in/assets/symbol-BaBtzzzl.svg" // External URL
+              src="/images/white.jpg" // External URL
               alt="The Rebel Logo" // Alt text for accessibility
               width={256} // Specify the width (e.g., 256px for w-64)
               height={256} // Specify the height (e.g., 256px for h-64)
-              className="w-64 h-64 object-cover rounded-lg" // Apply styles
+              className="w-64 h-64 object-cover block dark:hidden rounded-lg" // Apply styles
+            />
+            <Image
+              src="/images/black.jpg" // External URL
+              alt="The Rebel Logo" // Alt text for accessibility
+              width={256} // Specify the width (e.g., 256px for w-64)
+              height={256} // Specify the height (e.g., 256px for h-64)
+              className="w-64 h-64 object-cover hidden  dark:block rounded-lg" // Apply styles
             />
           </div>
         </div>

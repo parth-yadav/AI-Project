@@ -102,7 +102,7 @@ const AdminCollectionForm = ({
           </button>
           <button
             type="submit"
-            className="px-6 py-2 bg-orange-500 text-rebel-light rounded-full hover:bg-orange-600 transition-colors font-nofex"
+            className="px-6 py-2 bg-purple-500 text-rebel-light rounded-full hover:bg-purple-600 transition-colors font-nofex"
           >
             Save
           </button>

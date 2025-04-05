@@ -15,7 +15,7 @@ const Loader = () => {
         {/* Second Image */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-0 animate-fadeInAndOut"
-          style={{ backgroundImage: "url('/images/orange.jpg')" }}
+          style={{ backgroundImage: "url('/images/white.jpg')" }}
         ></div>
       </div>
       {/* Loading Text Below */}

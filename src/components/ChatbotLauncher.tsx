@@ -20,7 +20,7 @@ export default function ChatbotLauncher() {
         onClick={() => setIsChatOpen(!isChatOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg focus:outline-none hover:bg-orange-700 transition-colors duration-200"
+        className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center shadow-lg focus:outline-none hover:bg-purple-700 transition-colors duration-200"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ export default function ChatbotLauncher() {
             whileTap={{ scale: 0.95 }}
             className="absolute top-28 right-1 w-8 h-8 bg-gray-700 text-white rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors duration-200"
           >
-            <svg  
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
               fill="none"

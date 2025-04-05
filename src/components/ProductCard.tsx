@@ -47,7 +47,7 @@ const ProductCard = ({
       setIsWishlisted(!isWishlisted);
     }
   };
-  
+
   // Extract the first image URL or use a fallback
   const imageUrl =
     Array.isArray(images) && images.length > 0
@@ -91,7 +91,7 @@ const ProductCard = ({
             <FiHeart
               className={`w-5 h-5 transition-colors ${
                 isWishlisted
-                  ? "text-orange-500 fill-orange-500"
+                  ? "text-purple-500 fill-purple-500"
                   : "text-rebel-light"
               }`}
             />
