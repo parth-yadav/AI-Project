@@ -79,7 +79,7 @@ const ShoppingCart = () => {
     }
   };
 
-  const handleProductClick = (productId: string , name:string) => {
+  const handleProductClick = (productId: string, name: string) => {
     router.push(`/collections/${encodeURIComponent(name)}/${productId}`); // Navigate to the product details page
   };
 
@@ -90,8 +90,12 @@ const ShoppingCart = () => {
   const shipping = 15.99;
   const total = subtotal + shipping;
 
-  if (loading || loadingCart) return <div>
-    <Loader /></div>;
+  if (loading || loadingCart)
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 overflow-x-hidden">
@@ -132,7 +136,7 @@ const ShoppingCart = () => {
                     </Link>
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="text-gray-400 hover:text-rebel-light transition-colors"
+                      className="text-gray-400 hover:text-wolf-light transition-colors"
                     >
                       <FiTrash2 className="w-5 h-5 text-black" />
                     </button>
@@ -172,7 +176,7 @@ const ShoppingCart = () => {
         {/* Order Summary Section */}
         <div className="lg:col-span-1">
           <div className="bg-white rounded-lg shadow-sm p-6 space-y-6">
-            <h2 className="text-xl text-rebel-dark font-nofex font-semibold">
+            <h2 className="text-xl text-wolf-dark font-nofex font-semibold">
               Order Summary
             </h2>
             <div className="space-y-4">
@@ -190,14 +194,14 @@ const ShoppingCart = () => {
               </div>
               <div className="border-t pt-4">
                 <div className="flex justify-between">
-                  <span className="text-rebel-dark font-semibold">Total</span>
+                  <span className="text-wolf-dark font-semibold">Total</span>
                   <span className="font-bold text-lg text-black">
                     ${total.toFixed(2)}
                   </span>
                 </div>
               </div>
             </div>
-            <button className="w-full py-4 bg-rebel-light text-rebel-dark font-semibold rounded-md hover:opacity-90 transition-opacity">
+            <button className="w-full py-4 bg-wolf-light text-wolf-dark font-semibold rounded-md hover:opacity-90 transition-opacity">
               Proceed to Checkout
             </button>
             <p className="text-sm text-gray-500 text-center">

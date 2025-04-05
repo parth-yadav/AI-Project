@@ -64,7 +64,7 @@ const ProductCard = ({
   return (
     <Link href={`/collections/${encodeURIComponent(name)}/${id}`} passHref>
       <div
-        className={`group relative ${cardClasses} bg-rebel-dark rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-rebel-light/20 cursor-pointer`}
+        className={`group relative ${cardClasses} bg-wolf-dark rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-wolf-light/20 cursor-pointer`}
       >
         {/* Image Container */}
         <div className="relative h-[70%]">
@@ -92,14 +92,14 @@ const ProductCard = ({
               className={`w-5 h-5 transition-colors ${
                 isWishlisted
                   ? "text-purple-500 fill-purple-500"
-                  : "text-rebel-light"
+                  : "text-wolf-light"
               }`}
             />
           </button>
         </div>
 
         {/* Product Details */}
-        <div className="p-4 text-rebel-light">
+        <div className="p-4 text-wolf-light">
           <h3
             className={`font-nofex font-semibold mb-2 ${
               isMobile ? "text-sm" : "text-lg"

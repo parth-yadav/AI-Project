@@ -17,8 +17,8 @@ const Hero = ({ data }: HeroProps) => {
   // Handle missing or empty data
   if (!data || data.length === 0) {
     return (
-      <div className="relative h-screen bg-rebel-dark flex items-center justify-center">
-        <p className="text-rebel-light text-2xl font-nofex">
+      <div className="relative h-screen bg-wolf-dark flex items-center justify-center">
+        <p className="text-wolf-light text-2xl font-nofex">
           No hero content available
         </p>
       </div>
@@ -53,9 +53,9 @@ const Hero = ({ data }: HeroProps) => {
           </div>
 
           {/* Overlay and Content */}
-          <div className="absolute inset-0 bg-gradient-to-t from-rebel-dark/50 to-transparent">
+          <div className="absolute inset-0 bg-gradient-to-t from-wolf-dark/50 to-transparent">
             <div className="absolute bottom-16 left-16">
-              <h2 className="text-xl font-nofex mb-2 text-rebel-light/80">
+              <h2 className="text-xl font-nofex mb-2 text-wolf-light/80">
                 {slide.subtitle}
               </h2>
               <h1 className="text-6xl font-nofex font-bold mb-6">
@@ -63,7 +63,7 @@ const Hero = ({ data }: HeroProps) => {
               </h1>
               <a
                 href={slide.link}
-                className="text-rebel-light text-lg font-nofex hover:text-purple-500 transition-colors border-b border-transparent hover:border-purple-500"
+                className="text-wolf-light text-lg font-nofex hover:text-purple-500 transition-colors border-b border-transparent hover:border-purple-500"
               >
                 Shop Now
               </a>

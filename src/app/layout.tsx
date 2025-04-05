@@ -18,12 +18,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Providers>
           <ThemeWrapper>
-             <div className="bg-rebel-light dark:bg-rebel-dark overflow-x-hidden text-rebel-light">
-          <Navbar />
+            <div className="bg-wolf-light dark:bg-wolf-dark overflow-x-hidden text-wolf-light">
+              <Navbar />
               {children}
               <ChatbotLauncher />
-           <Footer />   
-              </div>
+              <Footer />
+            </div>
           </ThemeWrapper>
         </Providers>
       </body>

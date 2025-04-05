@@ -50,7 +50,7 @@ const AdminProductForm = ({
         </h2>
         <button
           onClick={onClose}
-          className="text-rebel-light/70 hover:text-rebel-light p-2"
+          className="text-wolf-light/70 hover:text-wolf-light p-2"
         >
           <FiX className="w-6 h-6" />
         </button>
@@ -61,7 +61,7 @@ const AdminProductForm = ({
           <input
             type="text"
             name="name" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={product?.name}
           />
         </div>
@@ -69,7 +69,7 @@ const AdminProductForm = ({
           <label className="block text-sm font-nofex mb-2">Category</label>
           <select
             name="category" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={product?.category}
           >
             <option value="popular">Popular</option>
@@ -85,7 +85,7 @@ const AdminProductForm = ({
           <input
             type="number"
             name="price" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={product?.price}
           />
         </div>
@@ -94,7 +94,7 @@ const AdminProductForm = ({
           <input
             type="url"
             name="image" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={product?.image}
           />
         </div>
@@ -102,13 +102,13 @@ const AdminProductForm = ({
           <button
             type="button"
             onClick={onClose}
-            className="px-6 py-2 border border-rebel-light/20 rounded-full hover:bg-rebel-light/10 transition-colors font-nofex"
+            className="px-6 py-2 border border-wolf-light/20 rounded-full hover:bg-wolf-light/10 transition-colors font-nofex"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-6 py-2 bg-purple-500 text-rebel-light rounded-full hover:bg-purple-600 transition-colors font-nofex"
+            className="px-6 py-2 bg-purple-500 text-wolf-light rounded-full hover:bg-purple-600 transition-colors font-nofex"
           >
             Save
           </button>

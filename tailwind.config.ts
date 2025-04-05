@@ -12,7 +12,7 @@ export default {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        rebel: {
+        wolf: {
           dark: "#000000",
           light: "#FFFFFF",
         },
@@ -79,6 +79,6 @@ export default {
       },
     },
   },
- 
+
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

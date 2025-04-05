@@ -42,12 +42,12 @@ const CollectionCard = ({
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-rebel-dark via-rebel-dark/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-wolf-dark via-wolf-dark/50 to-transparent" />
       </div>
 
       {/* Title and Description Container */}
       <div
-        className={`absolute bottom-0 left-0 right-0 p-6 text-rebel-light transition-all duration-300 ${
+        className={`absolute bottom-0 left-0 right-0 p-6 text-wolf-light transition-all duration-300 ${
           isHovered ? "h-32" : "h-16"
         }`}
       >
@@ -61,7 +61,7 @@ const CollectionCard = ({
         </h3>
         {/* Description */}
         <p
-          className={`text-rebel-light/70 font-nofex transform transition-all duration-300 ${
+          className={`text-wolf-light/70 font-nofex transform transition-all duration-300 ${
             isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >

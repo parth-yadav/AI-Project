@@ -50,7 +50,7 @@ const AdminCollectionForm = ({
         </h2>
         <button
           onClick={onClose}
-          className="text-rebel-light/70 hover:text-rebel-light p-2"
+          className="text-wolf-light/70 hover:text-wolf-light p-2"
         >
           <FiX className="w-6 h-6" />
         </button>
@@ -61,7 +61,7 @@ const AdminCollectionForm = ({
           <input
             type="text"
             name="title" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={collection?.title}
           />
         </div>
@@ -69,7 +69,7 @@ const AdminCollectionForm = ({
           <label className="block text-sm font-nofex mb-2">Description</label>
           <textarea
             name="description" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             rows={3}
             defaultValue={collection?.description}
           />
@@ -79,7 +79,7 @@ const AdminCollectionForm = ({
           <input
             type="text"
             name="category" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={collection?.category}
           />
         </div>
@@ -88,7 +88,7 @@ const AdminCollectionForm = ({
           <input
             type="url"
             name="image" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={collection?.image}
           />
         </div>
@@ -96,13 +96,13 @@ const AdminCollectionForm = ({
           <button
             type="button"
             onClick={onClose}
-            className="px-6 py-2 border border-rebel-light/20 rounded-full hover:bg-rebel-light/10 transition-colors font-nofex"
+            className="px-6 py-2 border border-wolf-light/20 rounded-full hover:bg-wolf-light/10 transition-colors font-nofex"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-6 py-2 bg-purple-500 text-rebel-light rounded-full hover:bg-purple-600 transition-colors font-nofex"
+            className="px-6 py-2 bg-purple-500 text-wolf-light rounded-full hover:bg-purple-600 transition-colors font-nofex"
           >
             Save
           </button>

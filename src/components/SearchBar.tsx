@@ -47,9 +47,9 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="hidden md:flex items-center border border-rebel-dark  dark:border-rebel-light rounded-full px-4 py-2 focus-within:border-rebel-light transition-colors relative w-full max-w-md">
+    <div className="hidden md:flex items-center border border-wolf-dark  dark:border-wolf-light rounded-full px-4 py-2 focus-within:border-wolf-light transition-colors relative w-full max-w-md">
       {/* Search Icon */}
-      <FiSearch className="w-5 h-5 text-rebel-dark dark:text-rebel-light" />
+      <FiSearch className="w-5 h-5 text-wolf-dark dark:text-wolf-light" />
 
       {/* Search Input */}
       <input
@@ -57,7 +57,7 @@ const SearchBar = () => {
         placeholder="Search..."
         value={query}
         onChange={(e) => handleChange(e.target.value)}
-        className="bg-transparent border-none focus:outline-none ml-2 w-40 font-impact text-rebel-dark dark:text-rebel-light placeholder:text-rebel-dark/60 dark:placeholder:text-rebel-light/60"
+        className="bg-transparent border-none focus:outline-none ml-2 w-40 font-impact text-wolf-dark dark:text-wolf-light placeholder:text-wolf-dark/60 dark:placeholder:text-wolf-light/60"
       />
 
       {/* Dropdown Results */}

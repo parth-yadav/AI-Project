@@ -17,7 +17,7 @@ interface PromotionsProps {
 
 const Promotions = ({ data }: PromotionsProps) => {
   return (
-    <section className="py-16 bg-rebel-light dark:bg-rebel-dark">
+    <section className="py-16 bg-wolf-light dark:bg-wolf-dark">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-nofex font-bold mb-8">Featured</h2>
         <Swiper
@@ -37,12 +37,12 @@ const Promotions = ({ data }: PromotionsProps) => {
                   fill
                   className="object-cover rounded-lg"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-rebel-dark via-rebel-dark/50 to-transparent rounded-lg">
+                <div className="absolute inset-0 bg-gradient-to-t from-wolf-dark via-wolf-dark/50 to-transparent rounded-lg">
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <h3 className="text-3xl font-nofex font-bold mb-2">
                       {promo.title}
                     </h3>
-                    <p className="text-rebel-light/70 text-xl">
+                    <p className="text-wolf-light/70 text-xl">
                       {promo.description}
                     </p>
                   </div>

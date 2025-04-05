@@ -126,10 +126,8 @@ const SimilarProducts = ({ collection }: SimilarProductsProps) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-16">
-     
-        <h2 className="text-3xl font-bold mb-6">You May Also Like</h2>
-        {/* <button className="text-rebel-light hover:underline">View All</button> */}
-      
+      <h2 className="text-3xl font-bold mb-6">You May Also Like</h2>
+      {/* <button className="text-wolf-light hover:underline">View All</button> */}
 
       {/* Carousel/Grid Container */}
       <div

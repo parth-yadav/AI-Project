@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const announcements = [
   "FREE SHIPPING ON ORDERS OVER $100",
   "NEW COLLECTION DROPS EVERY FRIDAY",
-  "JOIN THE REBELLION - GET 10% OFF",
+  "JOIN THE wolfLION - GET 10% OFF",
 ];
 
 const AnnouncementBanner = () => {
@@ -18,7 +18,7 @@ const AnnouncementBanner = () => {
   }, []);
 
   return (
-    <div className="bg-rebel-light text-rebel-dark py-2 text-center font-impact tracking-wider text-sm">
+    <div className="bg-wolf-light text-wolf-dark py-2 text-center font-impact tracking-wider text-sm">
       <div className="max-w-7xl mx-auto px-6">
         <div className="relative overflow-hidden h-6">
           {announcements.map((text, index) => (
@@ -26,8 +26,8 @@ const AnnouncementBanner = () => {
               key={index}
               className={`absolute w-full transition-transform duration-500 ${
                 index === currentIndex
-                  ? 'translate-y-0 opacity-100'
-                  : '-translate-y-full opacity-0'
+                  ? "translate-y-0 opacity-100"
+                  : "-translate-y-full opacity-0"
               }`}
             >
               {text}

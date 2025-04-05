@@ -32,7 +32,7 @@
 //           onClick={() => scroll("left")}
 //           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full hover:bg-black transition-colors"
 //         >
-//           <FiChevronLeft className="w-6 h-6 text-rebel-light" />
+//           <FiChevronLeft className="w-6 h-6 text-wolf-light" />
 //         </button>
 //         <div
 //           ref={sliderRef}
@@ -49,7 +49,7 @@
 //           onClick={() => scroll("right")}
 //           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full hover:bg-black transition-colors"
 //         >
-//           <FiChevronRight className="w-6 h-6 text-rebel-light" />
+//           <FiChevronRight className="w-6 h-6 text-wolf-light" />
 //         </button>
 //       </div>
 //     </div>

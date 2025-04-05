@@ -25,17 +25,17 @@ const features = [
 
 const LoyaltyBonus = () => {
   return (
-    <section className="py-8 border-t border-b border-rebel-dark dark:border-rebel-light">
+    <section className="py-8 border-t border-b border-wolf-dark dark:border-wolf-light">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-4">
               <feature.icon className="w-8 h-8 text-purple-500" />
               <div>
-                <h3 className="text-lg text-rebel-dark dark:text-rebel-light font-nofex mb-1">
+                <h3 className="text-lg text-wolf-dark dark:text-wolf-light font-nofex mb-1">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-rebel-dark dark:text-rebel-light/70">
+                <p className="text-sm text-wolf-dark dark:text-wolf-light/70">
                   {feature.description}
                 </p>
               </div>

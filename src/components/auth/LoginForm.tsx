@@ -41,7 +41,7 @@
 //               <input
 //                 {...register('email')}
 //                 type="email"
-//                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-rebel-light/20 placeholder-rebel-light/50 text-rebel-light rounded-t-md focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm bg-transparent"
+//                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-wolf-light/20 placeholder-wolf-light/50 text-wolf-light rounded-t-md focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm bg-transparent"
 //                 placeholder="Email address"
 //               />
 //               {errors.email && (
@@ -55,7 +55,7 @@
 //               <input
 //                 {...register('password')}
 //                 type="password"
-//                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-rebel-light/20 placeholder-rebel-light/50 text-rebel-light rounded-b-md focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm bg-transparent"
+//                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-wolf-light/20 placeholder-wolf-light/50 text-wolf-light rounded-b-md focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm bg-transparent"
 //                 placeholder="Password"
 //               />
 //               {errors.password && (
@@ -68,7 +68,7 @@
 //             <button
 //               type="submit"
 //               disabled={isSubmitting}
-//               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-rebel-dark bg-purple-500 hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50"
+//               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-wolf-dark bg-purple-500 hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50"
 //             >
 //               {isSubmitting ? 'Signing in...' : 'Sign in'}
 //             </button>

@@ -50,7 +50,7 @@ const AdminBannerForm = ({
         </h2>
         <button
           onClick={onClose}
-          className="text-rebel-light/70 hover:text-rebel-light p-2"
+          className="text-wolf-light/70 hover:text-wolf-light p-2"
         >
           <FiX className="w-6 h-6" />
         </button>
@@ -61,7 +61,7 @@ const AdminBannerForm = ({
           <input
             type="text"
             name="title" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={banner?.title}
           />
         </div>
@@ -70,7 +70,7 @@ const AdminBannerForm = ({
           <input
             type="text"
             name="subtitle" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={banner?.subtitle}
           />
         </div>
@@ -79,7 +79,7 @@ const AdminBannerForm = ({
           <input
             type="text"
             name="link" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={banner?.link}
           />
         </div>
@@ -88,7 +88,7 @@ const AdminBannerForm = ({
           <input
             type="url"
             name="image" // Add a name attribute
-            className="w-full px-4 py-2 bg-transparent border border-rebel-light/20 rounded-lg focus:outline-none focus:border-rebel-light transition-colors font-impact"
+            className="w-full px-4 py-2 bg-transparent border border-wolf-light/20 rounded-lg focus:outline-none focus:border-wolf-light transition-colors font-impact"
             defaultValue={banner?.image}
           />
         </div>
@@ -96,13 +96,13 @@ const AdminBannerForm = ({
           <button
             type="button"
             onClick={onClose}
-            className="px-6 py-2 border border-rebel-light/20 rounded-full hover:bg-rebel-light/10 transition-colors font-nofex"
+            className="px-6 py-2 border border-wolf-light/20 rounded-full hover:bg-wolf-light/10 transition-colors font-nofex"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-6 py-2 bg-purple-500 text-rebel-light rounded-full hover:bg-purple-600 transition-colors font-nofex"
+            className="px-6 py-2 bg-purple-500 text-wolf-light rounded-full hover:bg-purple-600 transition-colors font-nofex"
           >
             Save
           </button>

@@ -151,7 +151,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 className={`w-5 h-5 transition-colors ${
                   isWishlisted
                     ? "text-purple-500 fill-purple-500"
-                    : "text-rebel-light"
+                    : "text-wolf-light"
                 }`}
               />
             </button>
@@ -164,10 +164,8 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <button
                   key={size}
                   onClick={() => handleSizeClick(size)}
-                  className={`py-3 border border-rebel-light rounded-md hover:bg-rebel-light hover:text-rebel-dark transition-colors ${
-                    selectedSize === size
-                      ? "bg-rebel-light text-rebel-dark"
-                      : ""
+                  className={`py-3 border border-wolf-light rounded-md hover:bg-wolf-light hover:text-wolf-dark transition-colors ${
+                    selectedSize === size ? "bg-wolf-light text-wolf-dark" : ""
                   }`}
                 >
                   {size}
@@ -177,7 +175,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           </div>
           <button
             onClick={addToCart}
-            className="w-full py-4 bg-purple-600 text-rebel-dark hover:text-white font-semibold rounded-md hover:opacity-90 transition-opacity"
+            className="w-full py-4 bg-purple-600 text-wolf-dark hover:text-white font-semibold rounded-md hover:opacity-90 transition-opacity"
           >
             Add to Cart
           </button>

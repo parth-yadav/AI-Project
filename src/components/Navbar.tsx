@@ -44,7 +44,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className=" dark:bg-rebel-dark bg-rebel-light dark:text-rebel-light text-rebel-dark py-4 px-6 fixed w-full z-50 border-b border-rebel-light/20">
+    <nav className=" dark:bg-wolf-dark bg-wolf-light dark:text-wolf-light text-wolf-dark py-4 px-6 fixed w-full z-50 border-b border-wolf-light/20">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-8">
@@ -52,7 +52,7 @@ const Navbar = () => {
             {/* Light mode logo */}
             <Image
               src="/images/white.jpg"
-              alt="The Rebel Logo"
+              alt="The wolf Logo"
               width={56}
               height={56}
               className="object-cover block dark:hidden"
@@ -61,7 +61,7 @@ const Navbar = () => {
             {/* Dark mode logo */}
             <Image
               src="/images/black.jpg"
-              alt="The Rebel Logo Dark"
+              alt="The wolf Logo Dark"
               width={56}
               height={56}
               className="object-cover hidden dark:block"
@@ -87,7 +87,7 @@ const Navbar = () => {
         {/* Right Side (Search, Cart, Profile, Menu) */}
         <div className="flex items-center space-x-6">
           {/* Search Bar (Desktop Only) */}
-          {/* <div className="hidden md:flex items-center border border-rebel-light/20 rounded-full px-4 py-2 focus-within:border-rebel-light transition-colors">
+          {/* <div className="hidden md:flex items-center border border-wolf-light/20 rounded-full px-4 py-2 focus-within:border-wolf-light transition-colors">
             <FiSearch className="w-5 h-5" />
             <input
               type="text"
@@ -120,7 +120,7 @@ const Navbar = () => {
 
                 {/* Profile Dropdown */}
                 {isProfileOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-rebel-light dark:bg-rebel-dark border border-rebel-light/20 rounded-lg shadow-xl py-2">
+                  <div className="absolute right-0 mt-2 w-48 bg-wolf-light dark:bg-wolf-dark border border-wolf-light/20 rounded-lg shadow-xl py-2">
                     <Link
                       href="/shoppingcart"
                       className="block px-4 py-2 text-sm font-impact hover:bg-gray-500 transition-colors"
@@ -133,7 +133,7 @@ const Navbar = () => {
                     >
                       Profile
                     </Link>
-                    <div className="border-t border-rebel-light/20 my-1"></div>
+                    <div className="border-t border-wolf-light/20 my-1"></div>
                     <LogoutButton />
                   </div>
                 )}
@@ -142,7 +142,7 @@ const Navbar = () => {
               /* Login Button */
               <Link
                 href="/login"
-                className="bg-purple-500 text-rebel-light px-6 py-2 rounded-full hover:bg-purple-600 transition-colors font-nofex"
+                className="bg-purple-500 text-wolf-light px-6 py-2 rounded-full hover:bg-purple-600 transition-colors font-nofex"
               >
                 Login
               </Link>
@@ -162,7 +162,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-rebel-light dark:bg-rebel-dark border-t border-rebel-light/20 fade-in">
+        <div className="md:hidden absolute top-full left-0 w-full bg-wolf-light dark:bg-wolf-dark border-t border-wolf-light/20 fade-in">
           <div className="flex flex-col p-4 space-y-4 font-impact">
             {collections.map((collection) => (
               <Link

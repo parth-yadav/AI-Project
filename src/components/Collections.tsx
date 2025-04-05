@@ -100,7 +100,7 @@ const Collections = ({ data }: CollectionsProps) => {
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full hover:bg-black transition-colors"
               aria-label="Scroll left"
             >
-              <FiChevronLeft className="w-6 h-6 text-rebel-light" />
+              <FiChevronLeft className="w-6 h-6 text-wolf-light" />
             </button>
           )}
 
@@ -116,26 +116,22 @@ const Collections = ({ data }: CollectionsProps) => {
           >
             {visibleItems === 4
               ? getVisibleItems().map((collection) => (
-               
-                <CollectionCard
-                  key={`${collection.id}-${currentIndex}`}
-                  image={collection.image}
-                  title={collection.name}
-                  description={collection.description}
-                  ismobile = {false}
-                />
-                 
-              ))
-              : data.map((collection) => (
-
-                <CollectionCard
-                  key={collection.id}
-                  image={collection.image}
-                  title={collection.name}
-                  description={collection.description}
-                  ismobile= {true}
+                  <CollectionCard
+                    key={`${collection.id}-${currentIndex}`}
+                    image={collection.image}
+                    title={collection.name}
+                    description={collection.description}
+                    ismobile={false}
                   />
-                  
+                ))
+              : data.map((collection) => (
+                  <CollectionCard
+                    key={collection.id}
+                    image={collection.image}
+                    title={collection.name}
+                    description={collection.description}
+                    ismobile={true}
+                  />
                 ))}
           </div>
 
@@ -146,7 +142,7 @@ const Collections = ({ data }: CollectionsProps) => {
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full hover:bg-black transition-colors"
               aria-label="Scroll right"
             >
-              <FiChevronRight className="w-6 h-6 text-rebel-light" />
+              <FiChevronRight className="w-6 h-6 text-wolf-light" />
             </button>
           )}
         </div>
