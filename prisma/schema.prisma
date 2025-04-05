@@ -1,0 +1,142 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid()) // Store Firebase UID here
+  name          String?
+  email         String     @unique
+  phone         String?    @unique
+  image         String?
+  wishlist      Wishlist?
+  cart          Cart?
+  orders        Order[]
+  loyaltyPoints Int        @default(0)
+  addresses     Address[]
+  mobileNumber  String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+}
+
+model Admin {
+  id       String   @id @default(uuid())
+  name     String
+  email    String   @unique
+  password String   // Securely store hashed password
+  role     String   @default("SUPER_ADMIN") // Future roles like "EDITOR"
+}
+
+model Address {
+  id       String   @id @default(uuid())
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId   String
+  street   String
+  city     String
+  state    String
+  country  String
+  zipCode  String
+}
+
+model Product {
+  id           String     @id @default(uuid())
+  name         String
+  collection   String
+  images       String[]
+  price        Float      @default(0.0)
+  description  String
+  material     String
+  washcare     String
+  shipping     String
+  tags         String[]
+  stock        Int
+  sizes        String[]
+  keyFeatures  String[]
+  isPopular    Boolean    @default(false) 
+  hidden       Boolean    @default(false)
+  wishlists    Wishlist[] @relation("ProductToWishlist")
+  cartItems    CartItem[]
+  orderItems   OrderItem[]
+}
+
+model Wishlist {
+  id       String    @id @default(uuid())
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId   String    @unique
+  products Product[] @relation("ProductToWishlist")
+}
+
+model Cart {
+  id     String     @id @default(uuid())
+  user   User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String     @unique
+  items  CartItem[]
+}
+
+model CartItem {
+  id        String   @id @default(uuid())
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  cartId    String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+  quantity  Int      @default(1)
+  size      String @default("M")
+}
+
+model Order {
+  id         String      @id @default(uuid())
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId     String
+  items      OrderItem[]
+  totalPrice Float
+  status     OrderStatus @default(PENDING)
+  createdAt  DateTime    @default(now())
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId   String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+  quantity  Int
+  price     Float
+  size      String @default("M")
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELED
+}
+
+// New Models
+
+model Collection {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String
+  image       String @default("https://picsum.photos/seed/C6YJ3Cz/648/290")
+ 
+}
+  
+model Hero {
+  id       String   @id @default(uuid())
+  title    String
+  subtitle String
+  image    String   // URL to the hero image
+  link     String   // URL to the linked page
+}
+
+model Featured {
+  id       String   @id @default(uuid())
+  image    String   // URL to the feature image
+  title    String
+  subtitle String
+}
