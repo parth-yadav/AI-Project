@@ -14,13 +14,25 @@ if (!apiKey) {
 
 const genAI = new GoogleGenerativeAI(apiKey);
 
+// Base URL for product pages (update this with your actual website URL)
+const PRODUCT_PAGE_BASE_URL = "http://localhost:3000/collections/";
+
+// Define the Product interface
+interface Product {
+  id: string; // UUID for the product
+  name: string;
+  price: number;
+  size: string;
+  color: string;
+}
+
 // Function to initialize the model with the knowledge base
-function initializeModelWithKnowledgeBase(products: any[]) {
+function initializeModelWithKnowledgeBase(products: Product[]) {
   // Format the products data as a string to include in the system instructions
   const knowledgeBase = products
     .map(
-      (product: any) =>
-        `Product Name: ${product.name}, Price: ${product.price}, Size: ${product.size}, Color: ${product.color}`
+      (product) =>
+        `Product Name: ${product.name}, Price: ${product.price}, Size: ${product.size}, Color: ${product.color}, ID: ${product.id}`
     )
     .join("\n");
 
@@ -29,7 +41,7 @@ function initializeModelWithKnowledgeBase(products: any[]) {
     model: "gemini-2.5-pro-exp-03-25",
     systemInstruction:
       `You are a cheerful chatbot for a clothing website. Below is the knowledge base about the products:\n${knowledgeBase}\n\n` +
-      "Solve user queries based on this knowledge base. If the question is out of the knowledge base, respond politely and guide the user.",
+      "Solve user queries based on this knowledge base. If the question is out of the knowledge base, respond politely and guide the user. If the user finalizes or expresses interest in a product, show a link to the product page using the format: [Product Name](URL).",
   });
 }
 
@@ -37,7 +49,12 @@ function initializeModelWithKnowledgeBase(products: any[]) {
 export async function POST(request: NextRequest) {
   try {
     // Parse the incoming request body
-    const { message, history, products } = await request.json();
+    const {
+      message,
+      history,
+      products,
+    }: { message: string; history: any[]; products: Product[] } =
+      await request.json();
 
     if (!message || !Array.isArray(history)) {
       return NextResponse.json(
@@ -72,8 +89,25 @@ export async function POST(request: NextRequest) {
     // Send only the user's query to the model (no need to include the knowledge base)
     const result = await chatSession.sendMessage(message);
 
-    // Extract and return the response text
-    const responseText = result.response.text();
+    // Extract and process the response text
+    let responseText = result.response.text();
+
+    // Check if the response mentions a product name and append the product link
+    products.forEach((product: Product) => {
+      const productName = encodeURIComponent(product.name); // Encode the product name
+      const productLink = `${PRODUCT_PAGE_BASE_URL}${productName}/${product.id}`;
+      const markdownLink = `[${product.name}](${productLink})`;
+
+      // Replace mentions of the product name with a clickable link
+      if (responseText.includes(product.name)) {
+        responseText = responseText.replace(
+          new RegExp(`\\b${product.name}\\b`, "g"),
+          markdownLink
+        );
+      }
+    });
+
+    // Return the processed response
     return NextResponse.json({ response: responseText }, { status: 200 });
   } catch (error) {
     console.error("Error processing chat request:", error);
