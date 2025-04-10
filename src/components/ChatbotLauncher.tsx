@@ -112,7 +112,7 @@ export default function ChatbotLauncher() {
   };
 
   return (
-    <div className="fixed bottom-6 right-12 ">
+    <div className="fixed bottom-6 right-12  z-50">
       {/* Circular Button */}
       <motion.button
         onClick={() => setIsChatOpen(!isChatOpen)}
@@ -198,7 +198,7 @@ export default function ChatbotLauncher() {
                         bg-purple-600 
                         ${
                           chatItem.role === "user"
-                            ? "self-end rounded-2xl rounded-br-none"
+                            ? "self-end rounded-2xl rounded-br-none bg-gray-600 text-black"
                             : "self-start rounded-2xl rounded-bl-none"
                         }
                       `}
