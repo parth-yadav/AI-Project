@@ -67,8 +67,8 @@ const Navbar = () => {
               className="object-cover hidden dark:block"
             />
           </Link>
-
-          <ThemeToggle />
+{/* 
+          <ThemeToggle /> */}
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8 font-impact">
