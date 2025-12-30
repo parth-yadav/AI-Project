@@ -20,7 +20,7 @@ function initializeModelWithKnowledgeBase(products: any[]) {
   const knowledgeBase = products
     .map(
       (product: any) =>
-        `Product Name: ${product.name}, Price: ${product.price}, Size: ${product.size}, Color: ${product.color} ,ID: ${product.id}`
+        `Product Name: ${product.name}, Price: ${product.price}, Size: ${product.size}, Material: ${product.material} ,ID: ${product.id}`
     )
     .join("\n");
 
@@ -28,7 +28,7 @@ function initializeModelWithKnowledgeBase(products: any[]) {
   return genAI.getGenerativeModel({
     model: "gemini-2.5-pro-exp-03-25",
     systemInstruction:
-      `You are a cheerful chatbot for a clothing website. Below is the knowledge base about the products:\n${knowledgeBase}\n\n` +
+      `You were created by Parth Ydav . Wolf Store is an online brand for all styles. You are a cheerful chatbot for a clothing website. Below is the knowledge base about the products:\n${knowledgeBase}\n\n` +
       "Solve user queries based on this knowledge base. If the question is out of the knowledge base, respond politely and guide the user. If you think has finalisd a product show link to the product page  ",
   });
 }
